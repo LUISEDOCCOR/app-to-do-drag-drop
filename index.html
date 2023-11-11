@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Local -->
+    <script defer type="module" src="./js/index.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- Iconos  -->
+    <script src="https://kit.fontawesome.com/91c956bb82.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>ToDo App</h1>
+    </header>
+    <main>                                                      
+        <article id="container-addToDo">
+            <div class="d-flex flex-column gap-3 w-25">
+                <span>Add ToDO</span>
+                <input id="title" type="text" placeholder="Title">
+                <div class="form-floating">
+                    <textarea class="form-control" id="description" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Description</label>
+                </div>
+                <div>
+                    <button id="btn-add-toDo" type="button" class="btn">Add</button>
+                    <button id="btn-edit-toDo" type="button" class="d-none btn">Confirm</button>
+                </div>
+            </div>
+        </article>
+        <article id="container-ToDo">
+            <div id="task" class="container-item">
+                <span>Tasks</span>
+                <div class="task-item"></div>
+            </div>
+            <div id="progress" class="container-item">
+                <span>In progress</span>
+                <div class="progress-item"></div>
+            </div>
+            <div id="deleted" class="container-item">
+                <span>Deleted</span>
+                <div class="deleted-item"></div>
+                <button id="btn-deleted" class="btnRemove">
+                    <i id="btn-deleted" class="fa-solid fa-trash" style="color: #fff;"></i>
+                </button>
+            </div>
+            <div id="completed" class="container-item">
+                <span>Completed</span>
+                <div class="completed-item"></div>
+                <button id="btn-completed" class="btnRemove">
+                    <i id="btn-completed" class="fa-solid fa-check" style="color: #ffffff;"></i>
+                </button>
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>
