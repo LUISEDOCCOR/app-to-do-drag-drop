@@ -3,7 +3,9 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    flex-direction: column;
+    gap: 5px;
+    height: 130px;
     background-color: #555;
     color: #fff;
 }

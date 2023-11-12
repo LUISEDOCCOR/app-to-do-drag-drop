@@ -9,6 +9,7 @@ const remove = () =>{
             const id = e.target.id
             const element = id.split('-')
             const container = document.querySelector(`.${element[1]}-item`)
+            elements = []
             for(var item of container.children){
                 const id = item.id   
                 elements.push(document.getElementById(id))

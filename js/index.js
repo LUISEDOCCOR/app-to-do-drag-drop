@@ -1,6 +1,7 @@
 const btnAdd = document.querySelector("#btn-add-toDo");
 const toDoTitle = document.querySelector("#title");
 const toDoDescription = document.querySelector("#description");
+const itemDate  = document.querySelector('#date')
 
 //contenedores
 const taskItem = document.querySelector(".task-item");
@@ -17,6 +18,8 @@ import {
 import { drag, drop } from "./assets/dragDrop.js";
 import { addBtnEdit } from "./assets/btn.js";
 import { remove } from "./assets/remove.js";
+import { download } from "./assets/download.js"; 
+import { loadFile } from "./assets/read.js";
 
 const PushCard = (title, description, key, state) => {
   const card = document.createElement("div");
@@ -62,8 +65,16 @@ btnAdd.addEventListener("click", () => {
   }
 });
 
+var date = new Date
+date = date.toString()
+date = date.split(" ")
+itemDate.innerHTML = `${date[0]} ${date[1]} ${date[2]} ${date[3]}`
+
+
 rederdCards();
 drop();
 drag();
 remove()
+download()
+loadFile()
 export { PushCard };

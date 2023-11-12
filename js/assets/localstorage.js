@@ -1,9 +1,7 @@
 import { PushCard } from "../index.js";
 
 const key = () => {
-  var key = localStorage.length;
-  key++;
-  return key;
+  return Date.now()
 };
 
 const pushToDo = (title, description, key, state) => {
